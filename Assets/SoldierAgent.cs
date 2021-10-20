@@ -4,17 +4,11 @@ using UnityEngine;
 using Unity.MLAgents;
 using Unity.MLAgents.Actuators;
 using Unity.MLAgents.Sensors;
+using TMPro;
 
 public class SoldierAgent : Agent
 {
     private static Vector3 NullPosition = new Vector3(-1000, -1000, -1000);
-
-    //[SerializeField] private Transform targetTransform;
-    //public float moveSpeed = 4f;
-    //private Vector3 position;
-    //public MeshRenderer floorRenderer;
-    //public Material loseMaterial;
-    //public Material winMaterial;
 
     public JeepSpawn[] spawns;
 
@@ -22,8 +16,10 @@ public class SoldierAgent : Agent
     private ShootCannon cannon;
     private float angle = 0;
 
+
     [SerializeField] private float rotationSpeed = 1;
 
+    [SerializeField] public TextMeshPro score;
 
     private void Start()
     {
@@ -59,6 +55,7 @@ public class SoldierAgent : Agent
 
     public override void WriteDiscreteActionMask(IDiscreteActionMask actionMask)
     {
+        // prohibit shooting cannot during the period when it cannot be shot
         actionMask.SetActionEnabled(0, 1, this.cannon.CanShoot);
     }
 
@@ -73,32 +70,9 @@ public class SoldierAgent : Agent
         discreteActions[0] = Input.GetKey(KeyCode.Space) ? 1 : 0;
     }
 
-    public void OnTriggerEnter(Collider other)
-    {
-        //if (other.CompareTag("Goal"))
-        //{
-        //    SetReward(2f);
-        //    floorRenderer.material = winMaterial;
-
-        //    Debug.Log("Goal Reached ...");
-        //}
-        //else if (other.CompareTag("Wall"))
-        //{
-        //    floorRenderer.material = loseMaterial;
-        //    SetReward(-1f);
-        //    Debug.Log("Wall Reached ...");
-        //}
-        //EndEpisode();
-    }
 
     public override void OnEpisodeBegin()
     {
-        //var bullets = GameObject.FindGameObjectsWithTag("Bullet");
-        //foreach (var b in bullets)
-        //{
-        //    Destroy(b);
-        //}
-  
         // destroy jeeps
         foreach (var b in spawns)
         {
