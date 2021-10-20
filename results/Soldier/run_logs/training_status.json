@@ -1,0 +1,65 @@
+{
+    "SoldierBrain": {
+        "checkpoints": [
+            {
+                "steps": 500027,
+                "file_path": "results\\Soldier\\SoldierBrain\\SoldierBrain-500027.onnx",
+                "reward": 0.1346153846153846,
+                "creation_time": 1634699070.715292,
+                "auxillary_file_paths": [
+                    "results\\Soldier\\SoldierBrain\\SoldierBrain-500027.pt"
+                ]
+            },
+            {
+                "steps": 500027,
+                "file_path": "results\\Soldier\\SoldierBrain\\SoldierBrain-500027.onnx",
+                "reward": null,
+                "creation_time": 1634699135.8764563,
+                "auxillary_file_paths": [
+                    "results\\Soldier\\SoldierBrain\\SoldierBrain-500027.pt"
+                ]
+            },
+            {
+                "steps": 500027,
+                "file_path": "results\\Soldier\\SoldierBrain\\SoldierBrain-500027.onnx",
+                "reward": null,
+                "creation_time": 1634699159.0573769,
+                "auxillary_file_paths": [
+                    "results\\Soldier\\SoldierBrain\\SoldierBrain-500027.pt"
+                ]
+            },
+            {
+                "steps": 999994,
+                "file_path": "results\\Soldier\\SoldierBrain\\SoldierBrain-999994.onnx",
+                "reward": -0.25925925925925924,
+                "creation_time": 1634699881.1892605,
+                "auxillary_file_paths": [
+                    "results\\Soldier\\SoldierBrain\\SoldierBrain-999994.pt"
+                ]
+            },
+            {
+                "steps": 1467238,
+                "file_path": "results\\Soldier\\SoldierBrain\\SoldierBrain-1467238.onnx",
+                "reward": null,
+                "creation_time": 1634700299.9944134,
+                "auxillary_file_paths": [
+                    "results\\Soldier\\SoldierBrain\\SoldierBrain-1467238.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 1467238,
+            "file_path": "results\\Soldier\\SoldierBrain.onnx",
+            "reward": null,
+            "creation_time": 1634700299.9944134,
+            "auxillary_file_paths": [
+                "results\\Soldier\\SoldierBrain\\SoldierBrain-1467238.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.27.0",
+        "torch_version": "1.7.1+cu110"
+    }
+}
